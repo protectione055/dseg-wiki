@@ -219,7 +219,7 @@ app.executable: $(OBJ)
 这样我们又省掉了一组定义，到这里我们的Makefile已经非常简洁了。
 
 ### 2.6 伪目标
-`make`命令执行的时候，后面跟一个构建目标（不带参数的话默认是第一个依赖的目标），然后以这个目标为根建立整个依赖树。依赖树的每个节点是一个文件，任何时候我们都可以通过比较每个依赖文件和被依赖文件的时间，以决定是否需要执行命令。
+`make`命令执行的时候，后面会指定一个构建目标作为参数（不带参数的话默认是第一个依赖的目标），然后以这个目标为根建立整个依赖树。依赖树的每个节点是一个文件，任何时候我们都可以通过比较每个依赖文件和被依赖文件的时间，以决定是否需要执行命令。
 
 但是有些时候，我们需要执行一些不产生文件的操作，比如清理临时文件，这时候就需要用到“伪目标”。
 
@@ -250,5 +250,4 @@ clean:
 ## 参考资料
 [^1]: [浅显易懂 Makefile 入门 （01）](https://blog.csdn.net/wohu1104/article/details/110905996)
 [^2]: [Makefile概念入门](https://zhuanlan.zhihu.com/p/29910215)
-[^3]: [Makefile中文手册](https://www.vimlinux.com/lipeng/2013/08/01/Makefile/)
-[^4]: [Makefile中的通配符](https://blog.csdn.net/oqqHuTu12345678/article/details/125647145)
+[^3]: [Makefile中的通配符](https://blog.csdn.net/oqqHuTu12345678/article/details/125647145)
